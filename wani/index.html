@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="jp">
+<head>
+<title>熱川バナナワニ園</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/normalize.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/Slider.js"></script>
+
+
+<body onload="initialize();">
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript">
+	var map;
+	var cent = new google.maps.LatLng(34.816570, 139.068245); 
+	var MY_MAPTYPE_ID = 'cool';
+	function initialize() {
+
+		var stylez = [
+	{
+		"stylers": [
+			{ "visibility": "simplified" },
+			{ "hue": "#ffc184" },
+			{ "saturation": 50 },
+			{ "gamma": 1.5}
+		]
+	}
+];
+		var mapOptions = {
+			zoom: 16,                  
+			navigationControl: false,  
+			mapTypeControl: false,     
+			scaleControl: false,       
+			center: cent,
+			mapTypeControlOptions: {
+			mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+			},
+			mapTypeId: MY_MAPTYPE_ID
+		};
+		map = new google.maps.Map(document.getElementById("map"),mapOptions);
+		var styledMapOptions = {name: "sample"};
+		var jayzMapType = new google.maps.StyledMapType(stylez, styledMapOptions);map.mapTypes.set(MY_MAPTYPE_ID, jayzMapType);
+		var markerOpts = {
+			position: new google.maps.LatLng(34.816570, 139.068245), 
+			map: map,		
+			icon:"image/marker.png"	
+		};
+		var marker = new google.maps.Marker(markerOpts);
+		var infowin = new google.maps.InfoWindow({content:"text"});
+		google.maps.event.addListener(marker, 'click', function(){infowin.open(map, marker);});
+	}
+	</script>
+
+<div id="wrapper">
+<div id="sidebg">
+
+<div id="fixedBox">
+<header>
+
+<div class="menu">        
+<ul>            
+<li class="mc1"><a href="ex.html">ご案内</a>
+   <ul>                    
+   <li><a href="ex.html">園内のご案内</a></li>
+   <li><a href="ex.html#">交通のご案内</a></li>
+   <li><a href="ex.html">入園料金・営業時間</a></li>
+   </ul>
+</li>            
+<li class="mc2"><a href="#">園内の紹介</a>               
+   <ul>                    
+   <li><a href="#">ワニの概要</a></li>
+   <li><a href="#">当園のワニ</a></li>
+   <li><a href="#">レッサーパンダ</a></li>
+   <li><a href="#">園内花ごよみ</a></li>
+   </ul>
+</li>
+
+<li><img src="image/logo.png" /></li>              
+
+<li class="mc3"><a href="#">ワニ園友の会</a></li>            
+<li class="mc4"><a href="#">ＬＩＮＫ</a>
+	<ul>                    
+   <li><a href="#">トリップアドバイザー</a></li>
+   </ul>
+   </li>        
+</ul>
+</div>
+
+</header>
+</div><!-- fixedBoxEND -->
+
+
+<div class="slide_bg">
+<div id="slide">
+<ul>
+<li><a href=""><img src="image/header1.png" alt="" width="900" height="450" /></a></li>
+<li><a href=""><img src="image/header2.png" alt="" width="900" height="450" /></a></li>
+<li><a href=""><img src="image/header3.png" alt="" width="900" height="450" /></a></li>
+</ul>
+</div>
+</div>
+
+<div class="line"> </div>
+
+<div class="block1">
+<div class="block1_2">
+
+<div class="welcom">
+<div class="welcom2">
+<h1>ようこそ、熱川バナナワニ園へ</h1>
+<p>当園は本園・ワニ園、本園・植物園、分園の３園分かれております。
+（３園は、共通券でご覧頂けます。）　本園と分園の間は、無料シャトルバスで随時ご案内致しております。運行所要時間は２～３分です。</p>
+<p>絶滅の危機に瀕している貴重な世界のワニを17種類（亜種・交配種等を含む）約120頭飼育しており、種類のコレクションでは世界一です。</p>
+<p>植物は園内至る所に熱帯の花木、果樹などを中心に約9,000種展示しております。
+色鮮やかなハイビスカスやコチョウラン、カトレアの他に熱帯性スイレン（本園・植物園 ７号温室）は、１年を通してきれいに咲き誇っております。</p>
+<p class="guide"><a href="#">⇒園内のご案内へ</a></p>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="line"> </div>
+
+<div class="block2">
+<div class="block2_2">
+
+<div class="box bn1"><a href="#"><img src="image/bn1.png" alt="" /></a></div>
+<div class="box bn2"><a href="#"><img src="image/bn2.png" alt="" /></a></div>
+<div class="box bn3"><a href="#"><img src="image/bn3.png" alt="" /></a></div>
+<div class="box bn4"><a href="#"><img src="image/bn4.png" alt="" /></a></div>
+<div class="boxll"><a href="#"><img src="image/bnLL1.png" alt="" /></a></div>
+<div class="boxll"><a href="#"><img src="image/bnLL2.png" alt="" /></a></div>
+</div>
+</div>
+
+<div class="line"> </div>
+
+<div class="block3">
+<div class="block3_2">
+<h1>ワニのえさカレンダー</h1>
+<p class="comment">午後1時より実施予定。<br/>ワニは毎日エサを食べるわけではありません。1週間から10日くらいの間隔でも大丈夫です。
+当園では夏期は1週間に1度、冬期は2週間に1度の間隔でエサを与えております。<br/>※冬期は毎週日曜日に本園と分園交互に実施。</p>
+<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=350&amp;wkst=1&amp;hl=ja&amp;bgcolor=%23ffffff&amp;src=ssjp2t564mi7c7h2uhq58p0028%40group.calendar.google.com&amp;color=%230D7813&amp;ctz=Asia%2FTokyo" style=" border:solid 1px #777 " width="900" height="320" frameborder="0" scrolling="no"></iframe>
+</div>
+</div>
+
+<div class="line"> </div>
+
+<div class="block4">
+<div class="block4_2">
+<h1>アクセス</h1>
+  <div id="map"></div>
+  <p>〒413-0302 静岡県賀茂郡東伊豆町奈良本１２５３−１０</p>
+  <p>TEL:0557-23-1105　　FAX:0557-23-0866</p>
+<p>MAIL:wanien@i-younet.ne.jp</p>
+</div>
+</div>
+
+
+</div><!-- Sidebg End-->
+</div><!-- Wrapper End -->
+
+<footer>&copy;2015 熱川バナナワニ園</footer>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+
+body {
+	font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+	
+}
+.clear {
+	clear: both;
+}
+#wrapper{
+	max-width:1920px;
+	margin:0 auto;
+}
+
+#sidebg{
+	background: url(../image/wrbg.jpg) center repeat-y #fff;
+}
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+}
+header {
+	background: url(../image/he_bg.png);
+	height: 100px;
+}
+.menu ul {
+	width: 900px;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+.menu ul li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	float: left;
+	position: relative;
+	width: 180px;
+	height: 80px;
+	line-height: 130px;
+	color: #000;
+	text-align: center;
+}
+.menu ul li a {
+	color: #000;
+ background:;
+	display: block;
+	text-decoration: none;
+}
+.menu ul li:hover, .menu ul li a:hover {
+	color: #f39800;
+}
+.menu ul li ul {
+	position: absolute;
+	top: 80px;
+	width: 150px;
+	z-index: 100;
+}
+.menu ul li ul li {
+	visibility: hidden;
+	overflow: hidden;
+	width: 180px;
+	line-height: 40px;
+	height: 0;
+	background: rgba(255,255,255,0.9);
+	border-bottom: 1px solid #ccc;
+}
+.menu ul li ul li:hover, .menu ul li ul li a:hover {
+	background: rgba(255,255,255,0.4);
+	color: #f39800;
+}
+.menu ul li:hover ul li, .menu ul li a:hover ul li {
+	visibility: visible;
+	overflow: visible;
+	height: 40px;
+	line-height: 40px;
+	z-index: 10;
+}
+.menu * {
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+.mc1 {
+	background-image: url(../image/mb1.png);
+	border-bottom: 9px double #ffffb2;
+}
+.mc2 {
+	background-image: url(../image/mb2.png);
+	border-bottom: 9px double #ffffb2;
+}
+.mc3 {
+	background-image: url(../image/mb3.png);
+	border-bottom: 9px double #ffffb2;
+}
+.mc4 {
+	background-image: url(../image/mb4.png);
+	border-bottom: 9px double #ffffb2;
+}
+#slide {
+	width: 900px;
+	height: 450px;
+	margin: 30px auto 0;
+	position: relative;
+}
+
+.line{
+	width:900px;
+	height:50px;
+	margin:0 auto;
+/*	background:url(../image/slide_bg.png) top repeat-x;*/
+}
+
+.block1 {
+	height:500px;
+	margin: 10px auto 0;
+
+}
+.block1_2{
+	width:900px;
+	background:url(../image/block1bg.png);
+	margin:0 auto;
+}
+.welcom{
+	width:550px;
+	height:500px;
+	color:#6b3f31;
+	margin:30px 50px;
+}
+.welcom2{
+	padding:30px 0 0 20px;
+}
+.welcom2 h1{
+	margin-bottom:30px;
+}
+.welcom2 p{
+	line-height:23px;
+	font-size:14px;
+}
+.guide{
+	float:right;
+	text-align:center;
+	color:#6b3f31;
+	font-weight:bold;
+	padding:10px 30px;
+	position: relative;
+	border-radius: 4px;
+	color: #fff;
+	line-height: 50px;
+	background-color: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	line-height: 40px;
+}
+
+.guide:hover {
+background-color: rgba(255, 255, 255, .5);
+}
+.guide a{
+	color:#6b3f31;
+	text-decoration:none;
+}
+.guide,
+.guide::before,
+.guide::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+.block2{
+	height:800px;
+	margin:0 auto 0;
+}
+
+.block2_2{
+	width:900px;
+	margin:30px auto 0;
+}
+
+.box{
+	width:210px;
+	heigth:270px;
+	margin:20px 0 0 0 ;
+	display:inline-block;
+}
+.box img {
+	-webkit-transition: 0.3s ease-in-out;
+	   -moz-transition: 0.3s ease-in-out;
+	     -o-transition: 0.3s ease-in-out;
+	        transition: 0.3s ease-in-out;
+}
+.box:hover img {
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+.bn1{
+	margin-right:14px;
+}
+.bn2{
+	margin-right:14px;
+
+}
+.bn3{
+	margin-right:15px;
+
+
+}
+.bn4{
+
+}
+
+.boxll{
+	width:900px;
+	heigth:200px;
+	margin:30px 0 0 0 ;
+	display:inline-block;
+}
+.boxll img {
+-webkit-transition: 0.3s ease-in-out;
+-moz-transition: 0.3s ease-in-out;
+-o-transition: 0.3s ease-in-out;
+transition: 0.3s ease-in-out;
+}
+.boxll:hover img {
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+.block3{
+	height:550px;
+	margin:10px auto 10px;
+	padding:0 0 10px;
+	color:#6b3f31;
+}
+
+.block3_2{
+	width:900px;
+	margin:0 auto;
+}
+.block3 h1{
+	text-align:center;
+}
+.comment{
+	width:600px;
+	font-size:15px;
+	margin:0 auto 40px;
+}
+.block4{
+	height:690px;
+	margin:10px auto 0px;
+	padding:0 0 10px;	
+	color:#6b3f31;
+font-size:15px;
+}
+
+.block4_2{
+	width:900px;
+	margin:0 auto;
+}
+.block4 h1{
+	text-align:center;
+}
+
+#map{
+	width:900px;
+	height:350px;
+}
+
+footer {
+	font-size: 12px;
+	text-align: center;
+	padding: 20px 0;
+	height:30px;
+	background: url(../image/he_bg.png);
+}
