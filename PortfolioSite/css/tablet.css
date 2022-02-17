@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media screen and (max-width: 768px){
+img{
+max-width: 100%;
+height: auto;
+width /***/:auto;　
+}
+
+html,body{
+	height:100%;
+	font-size:100%;
+}
+
+body{
+background:#fff9f5;
+font-family: "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif; 
+font-size: 1em;
+}
+
+#wrapper{  
+  height: 100%; 
+  width: 100%;
+  margin: 0 auto;
+position:relative;
+} 
+
+#main{
+  font-size: 1em;
+  line-height:2.2em;
+  letter-spacing:.1em;
+}
+
+#main section{
+	padding:60px 50px;
+}
+  
+.workbox{
+	width:200px;
+	height:66px;
+	background:#b4ada9;
+	margin:10px 10px 0 0;
+	float:left;
+	border:1px solid #000;
+	color:#fff9f5;
+}
+
+#imagelightbox
+{
+    position: fixed;
+    z-index: 9999;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.clear{
+	clear:both;
+}
+#icon{
+	text-align:center;
+}
+
+#side{
+		background:#000;
+}
+#side a{
+	color:#fff9f5;
+	text-decoration:none;
+	letter-spacing:.2em;
+}
+
+#side ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+	font-size:1.5em;
+}
+#side ul li{
+	display:inline-block;
+	width:49%;
+	text-align:center;
+	padding:15px 0;
+}
+
+#side ul li a:hover{
+	border-bottom:double 7px #b4ada9;
+	padding:0 15px;
+}
+
+
+
+}
+

@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media screen and (min-width: 769px){
+img{
+max-width: 100%;
+height: auto;
+width /***/:auto;　
+}
+
+html,body{
+	height:100%;
+	font-size:100%;
+}
+
+body{
+background:#fff9f5;
+font-family: "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif; 
+font-size: 1em;
+}
+
+#wrapper{  
+  height: 100%; 
+  width: 100%;
+  max-width:1280px;
+position:relative;
+}  
+
+#main{    
+  margin-left:300px;
+  padding-right:30px;
+  font-size: 1em;
+  line-height:2.2em;
+  letter-spacing:.1em;
+}  
+
+#main section{
+	padding:80px 30px 80px 0;
+}
+  
+.workbox{
+	width:200px;
+	height:66px;
+	background:#b4ada9;
+	margin:10px 10px 0 0;
+	float:left;
+	border:1px solid #000;
+	color:#fff9f5;
+}
+
+#imagelightbox
+{
+    position: fixed;
+    z-index: 9999;
+ 
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.clear{
+	clear:both;
+}
+  
+  
+  
+#side{  
+float: left;
+    width: 230px;
+	height: 100%;
+   min-height: 100%;
+    position:fixed;
+	background:#000;
+	color:#fff9f5;
+	font-size:1.8em;
+	line-height:2.2em;
+	letter-spacing:.4em;
+	padding:0;
+	margin:0;
+}
+
+#side a{
+	color:#fff9f5;
+	text-decoration:none;
+}
+
+#side ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+
+#icon{
+	text-align:center;
+	margin:20px 0 10px 0;
+}
+
+.button {
+	display: inline-block;
+	width: 230px;
+	height: 65px;
+	text-decoration: none;
+	outline: none;
+	margin-bottom:5px;
+	padding-left:30px;
+}
+.button::before,
+.button::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: '';
+}
+.button,
+.button::before,
+.button::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+.button {
+	position: relative;
+	z-index: 2;
+}
+.button::after {
+	top: 0px;
+	left: 0px;
+	width: 229px;
+	height: 65px;
+	background:#b4ada9;
+	opacity: 0;
+}
+.button:hover::after {
+	opacity: 1;
+}
+
+
+
+
+}

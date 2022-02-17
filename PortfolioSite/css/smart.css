@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media screen and (max-width:640px){
+img{
+max-width: 100%;
+height: auto;
+width /***/:auto;　
+}
+
+html,body{
+	height:100%;
+	font-size:100%;
+}
+
+body{
+background:#fff9f5;
+font-family: "Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif; 
+font-size: 1em;
+}
+
+#main{
+	font-size: .9em;
+  line-height:1.8em;
+  letter-spacing:.1em;
+}
+#main section{
+	padding:40px 10px;
+}
+
+.workbox{
+	max-width:100%;
+    width /***/:auto; /* IE8のみ */
+    height:auto;
+    vertical-align:bottom;
+	border:none;
+	background:none;
+}
+
+#imagelightbox
+{
+    position: fixed;
+    z-index: 9999;
+ 
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.clear{
+	clear:both;
+}
+
+}
