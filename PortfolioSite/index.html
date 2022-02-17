@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" media="all" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" media="all" type="text/css" href="css/style.css" />
+<link rel="stylesheet" media="all" type="text/css" href="css/tablet.css" />
+<link rel="stylesheet" media="all" type="text/css" href="css/smart.css" />
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="js/jquery.smooth-scroll.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('a[href^=#]').click(function(){
+		var speed = 600;
+		var href= $(this).attr("href");
+		var target = $(href == "#" || href == "" ? 'html' : href);
+		var position = target.offset().top;
+		$("html, body").animate({scrollTop:position}, speed, "swing");
+		return false;
+	});
+});
+
+</script>
+<script src="js/imagelightbox.min.js"></script>
+<script>
+    $( function()
+    {
+        $( 'a' ).imageLightbox();
+    });
+</script>
+
+<title>n/a</title>
+</head>
+<body>
+
+<div id="wrapper">
+<div id="side">
+<div id="icon"><img src="img/icon.png"></div>
+<nav>
+<ul>
+<li><a class="button scroll" href="#top">Top</a></li>
+<li><a class="button scroll" href="#works">Works</a></li>
+<li><a class="button scroll" href="#profile">Profile</a></li>
+<li><a class="button" href="http://razz7le.tumblr.com/">Tumblr</a></li>
+</ul>
+</nav>
+
+</div><!-- sideEND -->
+
+
+
+<div id="main">
+<span><a id="top"></a></span>
+<article>
+<section>
+<h1>Hello! ///</h1>
+<p>
+「n/a」はアカハネ ナホのポートフォリオサイトです。<br />
+学校での制作物や自主制作物を展示しております。
+Tumblrでは趣味の写真や書き物などをやんわりと更新予定。<br />
+増えたり減ったりの、マイペーススペース。よろしくお願いいたします。<br />
+</p>
+<h2>History</h2>
+<p>
+2016/02/　ページリニューアル<br />
+2015/04/　サイトオープン<br />
+</p>
+
+</section>
+
+
+<section>
+<h1><a id="works">Works ///</a></h1>
+
+
+<div class="workbox"><a href="img/work1.jpg"><img src="img/work1_s.jpg" /></a></div>
+<div class="workbox"><a href="img/work2.jpg"><img src="img/work2_s.jpg" /></a></div>
+<div class="workbox"><a href="img/work3.jpg"><img src="img/work3_s.jpg" /></a></div>
+<div class="workbox"><a href="img/work4.jpg"><img src="img/work4_s.jpg" /></a></div>
+<div class="workbox"><a href="img/work5.jpg"><img src="img/work5_s.jpg" /></a></div>
+<div class="workbox"><a href="img/work6.jpg"><img src="img/work6_s.jpg" /></a></div>
+<div class="workbox"><a href="img/work7.jpg"><img src="img/work7_s.jpg" /></a></div>
+<div class="workbox"><a href="img/work8.jpg"><img src="img/work8_s.jpg" /></a></div>
+<div class="workbox"><a href="img/work9.jpg"><img src="img/work9_s.jpg" /></a></div>
+<div class="workbox"><a href="img/work10.jpg"><img src="img/work10_s.jpg" /></a></div>
+<div class="workbox">　none</div>
+
+</section>
+
+<section class="clear">
+<h1><a id="profile">Profile ///</a></h1>
+
+<div id="pfimg"></div>
+<div id="pftx">
+<h2>アカハネ　ナホ</h2>
+<p>HAL東京 グラフィックデザイン学科<br />
+長野県出身　6月9日生まれ　双子座　A型<br />
+趣味：映画鑑賞、写真撮影、読書<br />
+将来の夢：色々な国の景色を見る事<br />
+</p>
+
+<h3>Contact</h3>
+<p>akahane.naho■gmail.com　(■→@)までご連絡ください</p>
+</div>
+</section>
+</article>
+
+</div><!-- mainEND -->
+</div><!-- wrapperEND -->
+
+</body>
+</html>
+
+
