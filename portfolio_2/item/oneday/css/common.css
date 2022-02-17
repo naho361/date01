@@ -1,0 +1,212 @@
+@charset "utf-8";
+body {
+	background : #f9ebda;
+	font-family:'Lucida Grande',  'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',  Meiryo, メイリオ, sans-serif;
+	font-size:13px;
+	color:#26499d;
+	line-height: 190%;
+}
+
+a {/*リンクされた文字*/
+	color:#043c78;
+	font-style:normal;
+	text-decoration:none;
+}
+a:link {/*未訪問のリンク*/
+	color:#043c78;
+	font-style:normal;
+	text-decoration:none;
+}
+a:visited {/*訪問後のリンク*/
+	color:#043c78;
+	text-decoration:none;
+}
+a:hover {/*マウスをのせたとき*/
+	color:#a2c2e6;
+	font-style:normal;
+	text-decoration:none;
+}
+a:active {/*クリック中*/
+	text-decoration:none;
+	text-decoration:none;
+}
+#wrapper {
+	width:980px;
+	margin: 0 auto;
+}
+
+/* mainvisual */
+
+#mainvisual {
+	height : 730px;
+	background : url("../images/oneday.jpg");
+}
+#MainRight {
+	float:right;
+}
+#movie {
+	margin-top:210px;
+}
+#news {
+	margin-top: 10px;
+}
+/* mainvisualEnd */
+
+/* Navi */
+    #nav, #nav * {
+        margin:0;
+	padding:0;
+        font:bold 19px verdana,sans-serif;
+    }
+    #nav {
+        padding:1px;
+        background-color:#f9ebda;
+    }
+    #nav table {
+        margin:1px 0;
+        background-color:#eff3f7;
+    }
+    #nav tr.center {
+        text-align:center;
+    }
+    #nav td {
+        width:245px;
+	border:1px solid #043c78;
+    }
+    #nav a {   
+        padding:10px;
+        display:block;
+        background-color:#26499d;
+        color:#fffff9;
+        text-decoration:none;
+    }
+    #nav a:hover {
+        padding:10px;
+        background-color:#a2c2e6;
+        color:#fffff9;
+        text-decoration:none;
+    }
+
+/* NaviEnd */
+
+
+/* intro */
+
+#intro_area {
+	margin:50px 0 90px 0;
+	background:#fffff9 url("../images/story.png") no-repeat left top;
+	;
+	padding-right:15px;
+	border-top:10px dashed #26499d;
+}
+#caption {
+	float:right;
+	width:620px;
+	padding:15px 15px 35px;
+}
+.clear {
+	clear:both;
+}
+
+#IN{
+	font-family: 'La Belle Aurore', cursive;
+	font-size:60px;
+	margin:30px 0;
+}
+
+/* introEnd */
+
+/* cast */
+
+#cast_area {
+	margin:100px 0 10px 0;
+	background:#fffff9;
+	padding-right:30px;
+	border-top:10px dashed #26499d;
+}
+#CS {
+	margin:45px 0 35px 330px;
+	font-family: 'La Belle Aurore', cursive;
+	font-size:60px;
+}
+.img_float {
+	float:left;
+	margin:0 45px 50px 45px;
+}
+h1 {
+	font-size:20px;
+	padding-bottom:18px;
+}
+/* castEnd */
+
+/* gallery */
+
+#gallery_area {
+	margin:100px 0 10px 0;
+	background:#fffff9;
+	border-top:10px dashed #26499d;
+}
+#GA {
+	margin:50px 0 60px 390px;
+	font-family: 'La Belle Aurore', cursive;
+	font-size:60px;
+}
+#gallery_area a {
+	padding:15px 13px;
+}
+#gallery_area p {
+	height:180px;
+}
+/* galleryEnd */
+
+/* recommend */
+
+#recommend_area {
+	margin:100px 0 10px 0;
+	padding-bottom:25px;
+	background:#fffff9;
+	border-top:10px dashed #26499d;
+}
+#RE {
+	margin:45px 0 35px 340px;
+	font-family: 'La Belle Aurore', cursive;
+	font-size:60px;
+}
+.item {
+	margin:5px 30px;
+	float:left;
+	display: block;
+	text-align:center;
+}
+.banner {
+	margin:20px 10px;
+	float:left;
+	display: block;
+	text-align:center;
+}
+/* recommendEnd */
+
+/* footer */
+footer {
+	height:50px;
+	line-height: 50px;
+	margin-top:60px;
+	background:#26499d;
+	text-align:center;
+	color:#fff;
+}
+
+#btn{
+	background:#a2c2e6;
+	border-radius:5px;
+	color:#FFF;
+	padding:5px 20px;
+	position:fixed;
+	bottom:30px;
+	right:30px;
+	}
+#btn:hover{
+	background:#26499d;
+	}
+
+/* footerEnd */

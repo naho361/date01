@@ -1,0 +1,423 @@
+
+body , html { /*ページ全体*/
+    height: 100%;
+}
+body{
+	font-family:'JapanSans90','ヒラギノ角ゴ Pro W3','Hiragino Kaku  Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+	background:#CCC url(../img/bg.png);
+}
+@font-face {
+ font-family: 'JapanSans90';
+ src: url('../images/JapanSans90.eot');
+ src: url('../images/JapanSans90?#iefix') format('embedded-opentype'),
+ url('../images/JapanSans90.woff') format('woff'),
+ url('../images/JapanSans90.ttf') format('truetype'),
+ url('../images/JapanSans90.svg#JapanSans90') format('svg');
+ font-weight: normal;
+ font-style: normal;
+ }
+ 
+.clear{
+clear:both;
+}
+.font{
+font-family: 'Loved by the King', cursive;
+}
+
+#wrapper{
+	width:1000px;
+	margin:0 auto ;
+	background:#FFF;
+	position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+
+#contents {
+    padding-bottom: 150px;
+}
+
+#leftc{
+	letter-spacing: 5px;
+	width:220px;
+	float:left;
+	padding-left:30px;
+}
+
+#leftc h1{
+	color:#00a1e9;
+	font-size:75px;
+	font-weight:100;
+	padding:0;
+	margin:0;
+	letter-spacing: 5px;
+}
+.button:hover {
+	letter-spacing: 15px;
+}
+.button::before,
+.button::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: '';
+}
+.button,
+.button::before,
+.button::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+#leftc ul{
+	list-style:none;
+	padding:0;
+}
+#leftc ul li{
+	margin-bottom:5px;
+}
+#leftc ul li a{
+	color:#00a1e9;
+	font-size:30px;
+	text-decoration:none;
+}
+#leftc ul li a:hover{
+	color:#e4007f;
+	font-size:30px;
+}
+
+#rightc{
+	width:700px;
+	float:left;
+	font-size:12px;
+	padding-left:50px;
+}
+#preface{
+	margin-bottom:30px;
+}
+h1{
+	color:#00a1e9;
+	font-size:50px;
+	font-weight:100;
+	padding:0;
+	margin:20px 0 0 0;
+	letter-spacing: 15px;
+}
+#preface p{
+ line-height:25px;
+}
+
+figure {
+	position: relative;
+	overflow: hidden;
+	width:200px;
+	height:200px;
+	background:#CFF;
+	margin:10px 20px 10px 0;
+	float:left;
+}
+figure img{
+	width:100%;
+}
+figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,.8);
+	-webkit-transform: rotateX(-180deg);
+	transform: rotateX(-180deg);
+	-webkit-transition: .5s;
+	transition: .5s;
+	opacity: 0;
+}
+
+figure:hover figcaption {
+	-webkit-transform: rotateX(0);
+	transform: rotateX(0);
+	opacity: 1;
+}
+
+figure a{
+	color:#000;
+}
+
+footer{
+	font-size:10px;
+	text-align:center;
+	clear:both;
+	position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+}
+
+/* ////////////////////
+	item css
+////////////////////// */
+
+
+#thum{
+	margin:40px auto 20px;
+	text-align:center;
+}
+
+#date{
+	height:180px;
+}
+#works ul{
+	list-style:none;
+	margin:0;
+}
+#works ul li{
+	float:left;
+	width:280px;
+	margin:20px 30px 0 0;
+	padding-bottom:10px;
+}
+
+#works .title{
+	font-size:20px;
+	padding:0 20px;
+	letter-spacing:6px;
+}
+
+#site_window{
+	text-align:center;
+	margin:50px auto 80px;
+}
+
+#site_window a{
+	background:#00a1e9;
+	color:#fff;
+	padding:15px 40px;
+	margin-left:20px;
+	transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+	font-size:.9rem;
+	font-weight:600;
+	text-decoration:none;
+}
+#site_window a:hover{
+	background:#e4007f;
+}
+
+#concept{
+	padding:0 60px;
+	margin:0 auto;
+	line-height:25px;
+}
+#concept h1{
+	font-size:30px;
+	margin:60px 0 20px;
+	padding-bottom:15px;
+	border-bottom:1px dashed #00a1e9;
+}
+
+#concept a{
+	color:#e4007f;
+}
+
+
+
+
+/* ////////////////////
+	profile css
+////////////////////// */
+
+#pfarea {
+	margin:0 auto;
+	padding:0 60px;
+	line-height:22px;
+}
+#pfarea h1{
+	margin-top:50px;
+}
+#pfarea h2{
+	color:#00a1e9;
+	font-weight:100;
+}
+#pfig img{
+	margin:80px auto 20px;
+	width:100%;
+	text-align:center;
+}
+
+
+#twitter{
+	margin-top:50px;
+	padding:0 5%;
+}
+#skill h1{
+	font-size:30px;
+	margin:60px 0 20px;
+	padding-bottom:15px;
+	border-bottom:1px dashed #00a1e9;
+}
+.skill{
+	font-size:18px;
+	margin:30px 0;
+	padding-bottom:15px;	
+}
+
+
+
+
+
+/* ////////////////////
+	contact css
+////////////////////// */
+
+
+
+#formWrap {
+	width:100%;
+	margin:30px auto;
+	color:#555;
+	line-height:20px;
+	font-size:.8rem;
+}
+#formWrap .formwi{
+	width:100%;
+}
+table.formTable{
+	width:100%;
+	border-collapse:collapse;
+}
+table.formTable td,table.formTable th{
+	padding:10px;
+}
+#formWrap th,td{
+	width:100%;
+	font-weight:normal;
+	text-align:left;
+}
+
+.formbutton input{
+	color:#fff;
+	background:#e4007f;
+	border:none;
+	padding:10px;
+	margin:10px auto;
+}
+
+.formbutton input:hover{
+	background:#00a1e9;
+	color:#fff;
+	border:none;
+}
+
+
+#cnarea{
+	margin:0 auto;
+	padding:20px 80px;
+	line-height:1rem;
+}
+#cnarea h1{
+	margin:60px 0 20px;
+	padding-bottom:50px;
+}
+#cnarea a:link,a:visited,a:active,a:hover { 
+	overflow: hidden;
+	outline: none;
+}
+#cnarea a {
+	color: #e4007f;
+	text-decoration:underline;
+}
+
+
+
+
+/* ////////////////////
+	thx css
+////////////////////// */
+
+
+#thx img{
+	margin:60px 50px 0;
+	width:80%;
+	text-align:center;
+}
+
+/* ////////////////////
+	responsive css
+////////////////////// */
+
+@media screen and (max-width:900px) { 
+    /*　画面サイズが768pxからはここを読み込む　*/
+#wrapper{
+	width:100%;
+	margin:0 auto;
+	padding:0;
+}
+#leftc{
+	width:100%;
+	text-align:center;
+	margin:0 auto;
+	padding:0;
+}
+#leftc li{
+	margin:0 auto;
+	width:76%;
+	background:#bbe2f1;
+}
+
+#rightc{
+	margin:0 auto;
+	padding:0 0 0 2%;
+	width:97%;
+}
+#rightc h1{
+	text-align:center;
+}
+#preface{
+	 	text-align:center;
+}
+#work{
+	background:#3FF;
+	margin:0 auto;
+}
+figure{
+	padding:0;
+	margin:0 14% 20px;
+	text-align:center;
+	width:76%;
+	height:180px;
+	float:left;
+}
+figure img{
+	width:100%;
+	text-align:center;
+}
+#rightc a:hover img {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  -ms-filter: "alpha(opacity=70)";
+}
+
+figcaption{
+	display:none;
+}
+
+#works img{
+	padding:10%;
+	width:80%;
+}
+.itemc{
+	text-align:center;
+	margin:0 auto;
+}
+#pfig img{
+	padding:3% 10%;
+	width:80%;
+}
+
+}
