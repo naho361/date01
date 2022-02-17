@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* http://www.jasonbradbury.com/ */
+
+body{
+font-family:'Hiragino Mincho ProN','ＭＳ Ｐ明朝',serif;
+overflow-x : hidden;
+}
+
+
+
+div#mask,img.slide {
+	min-height: 100%;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+div#slideArea {
+	position: relative;
+	height:100%;
+	width:100%;
+	overflow: hidden;
+}
+img.slide{
+	z-index:-1000;
+}
+div#slider{
+	position:relative;
+}
+
+.centered {
+	margin: 0 auto;
+}
+
+#container{
+    padding-top:220px;
+}
+.box {
+    margin: 4px;
+    float: left;
+}
+.col2 {
+	width: 200px;
+	position: relative;
+	margin: 10px;
+}
+
+.col2 img {
+  border: 10px solid #fff;
+  border-bottom: 45px solid #fff;
+  -webkit-box-shadow: 3px 3px 3px #777;
+  -moz-box-shadow: 3px 3px 3px #777;
+  box-shadow: 3px 3px 3px #777;
+}
+
+.col2 p{
+	font-size:13px;
+ 	position: absolute;
+ 	text-align: center;
+ 	width: 100%;
+ 	bottom: 0px;
+ 	color: #555;
+}

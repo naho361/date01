@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+body, ul, li, h1, h2, span{
+	margin:0;
+	padding:0;
+}
+ul{
+	list-style:none;
+}
+
+#bgc{
+	position : absolute;
+	height:320px;
+	width: 320px;
+	border-radius:160px;
+    -moz-border-radius: 160px;
+    -webkit-border-radius: 160px;
+	top:-15px;
+	right:-20px;
+	background-color: rgba(255,255,255,.8);
+	float:right;
+}
+
+
+.slidingMenu {
+	letter-spacing:5px;
+	position: absolute;
+	height:320px;
+	width: 320px;
+	top:35px;
+	right:30px;
+	overflow:hidden;
+	padding-top:5px;
+}
+
+
+.slidingMenu li {
+	display:block;
+	float:right;
+	clear:both;
+	position:relative;
+	overflow:hidden;
+	z-index: 10;
+	transform: rotate(12deg);
+	-webkit-transform: rotate(12deg);  
+    -moz-transform: rotate(12deg); 
+	
+}
+.slidingMenu li.move {
+	width:3px;
+	height: 68px;
+	right:2px;
+	margin-top:2px;
+	z-index: 8;
+	position: absolute;    
+	}
+.slidingMenu li a {
+	font-size:55px;
+	font-weight:bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #222;
+	outline: none;
+	text-indent:5px;
+	z-index: 10;
+	display: block;
+	float: right;
+	height: 66px;
+	line-height: 66px;
+	position: relative;
+	overflow: hidden;
+	padding-right:5px;
+}
+/* Descriptions */
+.slidingMenuDesc{
+	margin-top:40px;
+	position:relative;
+}
+.slidingMenuDesc div{
+	background-color: rgba(0,0,0,.6);     
+ 	height: 68px;
+	padding-right:5px;
+	left:-150px;
+	margin-top:2px;
+	overflow:hidden;
+	position:absolute;
+
+}
+.slidingMenuDesc div span {
+	font-size:30px;
+	color: #fff;
+	text-indent:10px;
+	z-index: 20;
+	display: block;
+	height: 66px;
+	line-height: 66px;
+	position:absolute;
+	right:10px;
+	margin-left:5px;
+	top:-3px;
+}

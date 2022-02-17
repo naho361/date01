@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="jp">
+<head>
+<title>赤羽南穂・ポートフォリオ</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/work.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/fresco/fresco.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<!--menu↓-->
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<!--masonry↓-->
+<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+<!--fresco↓-->
+<script type="text/javascript" src="js/fresco.js"></script>
+<!--menu↓-->
+<script type="text/javascript">
+$(function() {
+    Cufon.replace('a, span').CSS.ready(function() {
+        var $menu       = $("#slidingMenu");
+ 
+        /**
+        * the first item in the menu,
+        * which is selected by default
+        */
+        var $selected   = $menu.find('li:first');
+ 
+        /**
+        * this is the absolute element,
+        * that is going to move across the menu items
+        * It has the width of the selected item
+        * and the top is the distance from the item to the top
+        */
+        var $moving     = $('<li />',{
+            className   : 'move',
+            top         : $selected[0].offsetTop + 'px',
+            width       : $selected[0].offsetWidth + 'px'
+        });
+ 
+        /**
+        * each sliding div (descriptions) will have the same top
+        * as the corresponding item in the menu
+        */
+        $('#slidingMenuDesc > div').each(function(i){
+            var $this = $(this);
+            $this.css('top',$menu.find('li:nth-child('+parseInt(i+2)+')')[0].offsetTop + 'px');
+        });
+ 
+        /**
+        * append the absolute div to the menu;
+        * when we mouse out from the menu
+        * the absolute div moves to the top (like initially);
+        * when hovering the items of the menu, we move it to its position
+        */
+        $menu.bind('mouseleave',function(){
+                moveTo($selected,400);
+              })
+             .append($moving)
+             .find('li')
+             .not('.move')
+             .bind('mouseenter',function(){
+                var $this = $(this);
+                var offsetLeft = $this.offset().left - 20;
+                //slide in the description
+                $('#slidingMenuDesc > div:nth-child('+ parseInt($this.index()) +')').stop(true).animate({'width':offsetLeft+'px'},400, 'easeOutExpo');
+                //move the absolute div to this item
+                moveTo($this,400);
+              })
+              .bind('mouseleave',function(){
+                var $this = $(this);
+                var offsetLeft = $this.offset().left - 20;
+                //slide out the description
+                $('#slidingMenuDesc > div:nth-child('+ parseInt($this.index()) +')').stop(true).animate({'width':'0px'},400, 'easeOutExpo');
+              });;
+ 
+        /**
+        * moves the absolute div,
+        * with a certain speed,
+        * to the position of $elem
+        */
+        function moveTo($elem,speed){
+            $moving.stop(true).animate({
+                top     : $elem[0].offsetTop + 'px',
+                width   : $elem[0].offsetWidth + 'px'
+            }, speed, 'easeOutExpo');
+        }
+    }) ;
+});
+</script>
+
+
+<!--background↓-->
+<script type="text/javascript">
+
+$(function(){
+    setInterval(
+    function(){
+        $("#slider img:last").animate({'opacity':'0',},
+        {duration:2000,complete:
+        function() {
+            $("#slider img:last").clone().prependTo("#slider");
+            $("#slider img:first").css({'opacity':'1'});
+            $("#slider img:last").remove();
+        },
+        });
+    },4000);
+});
+</script>
+
+<!--masonry↓-->
+<script>
+jQuery(window).load(function(){
+    $('#container').masonry({
+     itemSelector: '.box',
+    columnWidth: 240, //一列の幅サイズを指定
+    isAnimated: true, //スムースアニメーション設定
+    isFitWidth: true, //親要素の幅サイズがピッタリ
+    });
+  });
+</script>
+
+<!? Make IE8 and below responsive by adding CSS3 MediaQuery support ?>
+<!?[if lt IE 9]>
+<script type=’text/javascript’ src=’http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js’></script>
+<![endif]?>
+<!? Youtube Iframe API (optional, for HD video) ?>
+<script type=”text/javascript” src=”http://www.youtube.com/iframe_api”></script>
+</head>
+</head>
+
+<body>
+<span id="bgc"></span>
+<div id="wrapper">
+<div id="menu">
+<div id="slidingMenuDesc" class="slidingMenuDesc wf">
+  <div><span>My dearest treasure ! Gallery !</span></div>
+  <div><span>× Coming soon !</span></div>
+</div>
+<ul id="slidingMenu" class="slidingMenu wf">
+  <li><a href="index.html">Top</a></li>
+  <li><a href="work.html">Work</a></li>
+  <li><a href="#">About</a></li>
+</ul>
+</div>
+
+  <div id="contents"></div>
+  <div id="container" class="centered">
+  
+    <div class="box col2">
+      <div id="secondpage">
+      <p>2014HMFポスター</p>
+      <a href="image/LL/007.png" class='fresco' data-fresco-caption="現代版百鬼夜行　2013/09 GD"> 
+      <img src="image/SS/007.png" alt=""></a> </div>
+    </div>
+    <div class="box col2">
+    <p>パッケージ制作</p>
+      <div id="secondpage"> <a href="image/LL/005.png" class='fresco' data-fresco-caption="「PRETZ」　ロゴのトレスが楽しかったです　2013/10 DT"> <img src="image/SS/005.png" alt=""></a> </div>
+    </div>
+    <div class="box col2">
+    <p>映画サイト</p>
+      <div id="secondpage"> <a href="image/LL/009.png" class='fresco' data-fresco-caption="北米版の公式サイトを参考にしました　2013/10 WD"> <img src="image/SS/009.png" alt=""></a> </div>
+    </div>
+    <div class="box col2">
+    <p>PLAYBUTTON</p>
+      <div id="secondpage"> <a href="image/LL/004.png" class='fresco' data-fresco-caption="フォトコラージュで作成しました　2013/06 GD"> <img src="image/SS/004.png" alt=""></a> </div>
+    </div>
+    <div class="box col2">
+    <p>雑誌表紙制作</p>
+      <div id="secondpage"> <a href="image/LL/001.png" class='fresco' data-fresco-caption="「SPUR」　注目ポイントはクロエ・モレッツの美貌　2013/07 DT"> <img src="image/SS/001.png" alt=""></a> </div>
+    </div>
+    <div class="box col2">
+    <p>2013HEWポスター</p>
+      <div id="secondpage"> <a href="image/LL/002.png" class='fresco' data-fresco-caption="「夢を見る」　描画力賞をいただきました　2013/03 CG"> <img src="image/SS/002.png" alt=""></a> </div>
+    </div>
+        <div class="box col2">
+    <p>2013HEWポスター(ラフ)</p>
+      <div id="secondpage"> <a href="image/LL/002-r.png" class='fresco' data-fresco-caption="顔があったり、モニターが普通だったり　2013/02 CG"> <img src="image/SS/002-r.png" alt=""></a> </div>
+    </div>
+    <div class="box col2">
+    <p>「Red」</p>
+      <div id="secondpage"> <a href="image/LL/Red.png" class='fresco' data-fresco-caption="「RGB・R」　フォトコラージュ。ベースは松本城の池の睡蓮。テーマは「Sanzu-三途-」 2014/02 WD"> <img src="image/SS/Red.png" alt=""></a> </div>
+    </div>
+    <div class="box col2">
+    <p>「Green」</p>
+      <div id="secondpage"> <a href="image/LL/Green.png" class='fresco' data-fresco-caption="「RGB・G」　ベースは学校から見える景色。テーマは「転生」 2014/02 WD"> <img src="image/SS/Green.png" alt=""></a> </div>
+    </div>
+    <div class="box col2">
+    <p>「Blue」</p>
+      <div id="secondpage"> <a href="image/LL/Blue.png" class='fresco' data-fresco-caption="「RGB・B」　ベースは大雪の日。テーマは「gift」 2014/02 WD"> <img src="image/SS/Blue.png" alt=""></a> </div>
+    </div>
+    <div class="box col2">
+    <p>西洋美術分野調べ</p>
+      <div id="secondpage"> <a href="image/LL/003.png" class='fresco' data-fresco-caption="特別出演：ダニエル・クレイグ　2013/09 DG"> <img src="image/SS/003.png" alt=""></a> </div>
+    </div>
+    <div class="box col2">
+    <p>コクヨノート</p>
+      <div id="secondpage"> <a href="image/LL/008.png" class='fresco' data-fresco-caption="コクヨノートコンテスト応募作　2013/11"> <img src="image/SS/008.png" alt=""></a> </div>
+    </div>
+    <div class="box col2">
+    <p>カタログ制作</p>
+      <div id="secondpage"> <a href="image/LL/006.png" class='fresco' data-fresco-caption="「CIBONE」　高めの年齢層を意識しました　2013/12/14"> <img src="image/SS/006.png" alt=""></a> </div>
+    </div>
+    <div class="box col2">
+    <p>雑貨サイト</p>
+      <div id="secondpage"> <a href="image/LL/010.png" class='fresco' data-fresco-caption="初めてJQueryに挑戦した時のもの　2013/09 WD"> <img src="image/SS/010.png" alt=""></a> </div>
+    </div>
+     <div class="box col2">
+    <p>CDジャケット</p>
+      <div id="secondpage"> <a href="image/LL/011.png" class='fresco' data-fresco-caption="epa14th応募作　2014/01"> <img src="image/SS/011.png" alt=""></a> </div>
+    </div>
+  </div>
+  <!-- containerEnd -->
+  
+  <div id="slider"> <img class="slide" src="image/bg03.png"> <img class="slide" src="image/bg02.png"> <img class="slide" src="image/bg01.png"> </div>
+</div>
+<!-- WrapperEnd -->
+
+</body>
+</html>

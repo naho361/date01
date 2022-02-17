@@ -1,0 +1,215 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html,body{
+	height:100%;
+	min-height:100%;
+	font-family:'Hiragino Mincho ProN', serif;
+}
+#wrapper{
+	width:960px;
+	margin:0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	position: relative;	
+	background:rgba(255,255,255,0.5);
+}
+.clear{
+	clear:both;
+	display:inline;
+}
+.font{
+font-family: 'Alike', serif;
+font-size:19px;
+}
+
+a {/*リンクされた文字*/
+	color: #900;
+	font-style: normal;
+	text-decoration: none;
+}
+a:link {/*未訪問のリンク*/
+	color: #900;
+	font-style: normal;
+	text-decoration: none;
+}
+a:visited {/*訪問後のリンク*/
+	color: #900;
+	text-decoration: none;
+}
+a:hover {/*マウスをのせたとき*/
+	color: #f5b2b2;
+	font-style: normal;
+	text-decoration: none;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+}
+a:active {/*クリック中*/
+	text-decoration: none;
+}
+
+#header{
+	height:120px;
+}
+#header img{
+	float:left;
+	font-size:13px;
+	line-height:.8em;
+	letter-spacing: .1em;
+	padding-left:15px;
+}
+#global{
+	height:100px;
+	padding-top:16px;
+}
+#nav ul{
+	float:right;
+	text-align:center;
+	list-style: none;
+	width: 400px;
+	padding:0;
+	border-left:1px solid #000;
+	margin-right:15px;
+}
+#nav li{
+	width:125px;
+	display:inline-block;
+	border-right:1px solid #000;
+	padding:0;
+}
+#main{
+	padding:40px 0 90px 0;
+}
+#leftc{
+	float:left;
+	width:160px;
+	margin:0 60px 0 30px;
+	background:rgba(255,255,255,0.5);
+	padding:10px;
+	border-radius:4px;
+}
+#submenu ul{
+	list-style: none;
+	line-height:2.1em;
+	font-size:16px;
+}
+
+#rightc{
+	float:left;
+	width:610px;
+	padding:5px 30px 50px 30px;
+	background:rgba(255,255,255,0.5);
+	margin-bottom:80px;
+	border-radius:4px;
+}
+.title{
+	padding:10px 0 15px;
+	font-size:23px;
+	font-weight:bold;
+
+}
+#concept{
+	font-size:13px;
+	line-height:1.9em;
+	width:590px;
+	margin:0 auto;
+	letter-spacing: .1em;
+}
+#chef{
+	margin-top:50px;
+	font-size:12px;
+	line-height:.8em;
+}
+#chef img{
+	float:left;
+	padding:0 35px 30px 0;
+}
+.sub{
+line-height:1.8em;
+width:380px;
+float:left;
+}
+#map{
+	margin:70px 0 20px;
+	width:560px;
+	height:340px;
+	border-radius:2px;
+}
+#footer{
+	height:130px;
+	width:100%;
+	bottom:0;
+	position: absolute;
+	font-size:12px;
+	line-height:.6em;
+	letter-spacing: .1em;
+	padding-left:20px;
+	margin-top:120px;
+}
+.bold{
+	font-weight:700;
+}
+
+#mark{
+font-size:9px;
+}
+
+/* form 1 */
+
+	#form1{
+		margin:50px 0 20px;
+		padding:25px 0;
+		border:none;
+		background:rgba(255,255,255,.8);
+		border-radius:2px;
+		}
+	#form1 fieldset{
+		margin:0;
+		padding:0;
+		border:none;	
+		float:left;
+		display:inline;
+		width:260px;
+		margin-left:25px;
+		}		
+	#form1 legend{
+		display:none;
+		}	
+	#form1 p{
+		margin:.5em 0;
+		}	
+	#form1 label{
+		display:block;
+		}	
+	#form1 input, #form1 textarea{		
+		width:252px;
+		padding:3px;
+		border:solid 1px #000;
+		background:none;
+		border-radius:2px;
+		}		
+	#form1 textarea{
+		height:185px;
+		overflow:auto;
+		}					
+	#form1 p.submit{
+		clear:both;
+		padding:20px 25px;
+		margin:0;
+		text-align:right;
+		}	
+	#form1 button{
+		width:150px;
+		height:37px;
+		line-height:37px;		
+		color:#000;
+		border:solid 1px #000;
+		background:none;
+		cursor:pointer;
+		text-align:center;
+		border-radius:2px;
+		}				
+
+/* // form 1 */

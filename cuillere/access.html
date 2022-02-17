@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="jp">
+<head>
+<meta charset="utf-8" />
+<title>Cuillere restaurant</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Alike' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/normalize.css" media="all">
+<link rel="stylesheet" type="text/css" href="css/common2.css" media="all">
+<script type="text/javascript" src="js/main.js"></script>
+<script src="js/jquery.fullwindowslider.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+</head>
+
+<body onload="initialize();">
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript">
+	var map;
+	var cent = new google.maps.LatLng(35.668545, 139.761232); 
+	var MY_MAPTYPE_ID = 'cool';
+	function initialize() {
+
+		var stylez = [
+	{
+		"featureType": "all",
+		"stylers": [
+			{ "saturation": -100 }
+		]
+	}
+];
+		var mapOptions = {
+			zoom: 16,                  
+			navigationControl: false,  
+			mapTypeControl: false,     
+			scaleControl: false,       
+			center: cent,
+			mapTypeControlOptions: {
+			mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+			},
+			mapTypeId: MY_MAPTYPE_ID
+		};
+		map = new google.maps.Map(document.getElementById("map"),mapOptions);
+		var styledMapOptions = {name: "sample"};
+		var jayzMapType = new google.maps.StyledMapType(stylez, styledMapOptions);map.mapTypes.set(MY_MAPTYPE_ID, jayzMapType);
+		var markerOpts = {
+			position: new google.maps.LatLng(35.668545, 139.761232), 
+			map: map,		
+			icon:"images/icon.png"	
+		};
+		var marker = new google.maps.Marker(markerOpts);
+		var infowin = new google.maps.InfoWindow({content:"text"});
+		google.maps.event.addListener(marker, 'click', function(){infowin.open(map, marker);});
+	}
+	</script>
+<div id="wrapper">
+
+<div id="slide">
+<img class="slide" src="images/bg09.jpg">
+<img class="slide" src="images/bg13.jpg">
+</div>
+
+<div id="header">
+<span>
+<a href="index.html"><img src="images/logo.png" alt="ロゴ"></a>
+</span>
+  
+<div id="global">
+<div id="nav" class="font">
+<ul>
+<li><a class="alpha" href="cuillere.html">Cuillere</a></li>
+<li><a class="alpha" href="access.html">Access</a></li>
+<li><a class="alpha" href="reserve.html">Reserve</a></li>
+</ul>
+</div></div><div class="clear"></div>
+</div><!--header end-->
+
+  
+  <div id="main">
+    <div id="leftc">
+    
+    <div id="submenu" class="font">  
+    <ul>
+    <li><a href="lunch.html">Menu</a></li>
+    <li><a href="lunch.html">　 Lunch</a></li>
+    <li><a href="lunch.html">　 Dinner</a></li>
+    <li><a href="lunch.html">　 Wine List</a></li>
+    <li><a href="lunch.html">Wedding</a></li>
+    <li><a href="index.html">Index</a></li>
+    </ul>
+    </div>
+    
+    </div>
+    
+    <div id="rightc">
+    <div id="concept">
+<p class="font title">Access</p>
+<p>キュイエール銀座<br />
+〒104-0061　東京都中央区銀座8-7-6<br />
+TEL 03-6229-7770<br />
+FAX 03-6229-7771</p>
+
+<p>東京メトロ銀座線、丸ノ内線、日比谷線銀座駅「B6 出口」徒歩1分</p>
+<p>※駐車場はありません。<br />最寄りの有料駐車場（三越など）をご利用ください。</p>
+   
+  <div id="map"></div>
+
+    </div>
+    <!--rightc end--> 
+      <br class="clear" />
+  </div>
+  <!--main end--> 
+  
+  <br class="clear" />
+  <div id="footer">
+    <p class="bold">キュイエール銀座</p>
+    <p>〒104-0061　東京都中央区銀座8-7-6</p>
+    <p class="bold">TEL 03-6229-7770</p>
+    <p>FAX 03-6229-7771</p>
+    <p>LUNCH 11:30-14:00 (L.O.)　DINNER 18:00-21:00 (L.O.)</p>
+    <p id="mark">&copy; Cuillere All Rights Reserved.</p>
+  </div>
+  <!--footer end--> 
+  
+</div><!--wrapper end-->
+
+</body>
+</html>

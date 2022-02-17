@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="jp">
+<head>
+<title>赤羽南穂・ポートフォリオ</title>
+<meta charset="utf-8" />
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+<link rel="icon" href="image/favicon.ico" >
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+<!--menu↓-->
+  <script type="text/javascript" src="js/cufon-yui.js"></script> 
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> 
+<!--snowfall↓-->
+<script type="text/javascript" src="js/snowfall.jquery.js"></script>
+
+<!--menu↓-->
+<script type="text/javascript">
+$(function() {
+    Cufon.replace('a, span').CSS.ready(function() {
+        var $menu       = $("#slidingMenu");
+ 
+        /**
+        * the first item in the menu,
+        * which is selected by default
+        */
+        var $selected   = $menu.find('li:first');
+ 
+        /**
+        * this is the absolute element,
+        * that is going to move across the menu items
+        * It has the width of the selected item
+        * and the top is the distance from the item to the top
+        */
+        var $moving     = $('<li />',{
+            className   : 'move',
+            top         : $selected[0].offsetTop + 'px',
+            width       : $selected[0].offsetWidth + 'px'
+        });
+ 
+        /**
+        * each sliding div (descriptions) will have the same top
+        * as the corresponding item in the menu
+        */
+        $('#slidingMenuDesc > div').each(function(i){
+            var $this = $(this);
+            $this.css('top',$menu.find('li:nth-child('+parseInt(i+2)+')')[0].offsetTop + 'px');
+        });
+ 
+        /**
+        * append the absolute div to the menu;
+        * when we mouse out from the menu
+        * the absolute div moves to the top (like initially);
+        * when hovering the items of the menu, we move it to its position
+        */
+        $menu.bind('mouseleave',function(){
+                moveTo($selected,400);
+              })
+             .append($moving)
+             .find('li')
+             .not('.move')
+             .bind('mouseenter',function(){
+                var $this = $(this);
+                var offsetLeft = $this.offset().left - 20;
+                //slide in the description
+                $('#slidingMenuDesc > div:nth-child('+ parseInt($this.index()) +')').stop(true).animate({'width':offsetLeft+'px'},400, 'easeOutExpo');
+                //move the absolute div to this item
+                moveTo($this,400);
+              })
+              .bind('mouseleave',function(){
+                var $this = $(this);
+                var offsetLeft = $this.offset().left - 20;
+                //slide out the description
+                $('#slidingMenuDesc > div:nth-child('+ parseInt($this.index()) +')').stop(true).animate({'width':'0px'},400, 'easeOutExpo');
+              });;
+ 
+        /**
+        * moves the absolute div,
+        * with a certain speed,
+        * to the position of $elem
+        */
+        function moveTo($elem,speed){
+            $moving.stop(true).animate({
+                top     : $elem[0].offsetTop + 'px',
+                width   : $elem[0].offsetWidth + 'px'
+            }, speed, 'easeOutExpo');
+        }
+    }) ;
+});
+</script>
+
+<!--background↓-->
+<script type="text/javascript">
+
+$(function(){
+    setInterval(
+    function(){
+        $("#slider img:last").animate({'opacity':'0',},
+        {duration:2000,complete:
+        function() {
+            $("#slider img:last").clone().prependTo("#slider");
+            $("#slider img:first").css({'opacity':'1'});
+            $("#slider img:last").remove();
+        },
+        });
+    },6000);
+});
+</script>
+
+<!--snowfall↓-->
+<script type="text/javascript">
+$(window).load(function(){
+	$(document).snowfall({
+		image :"image/flake.png",
+		minSize: 10,
+		maxSize:22,
+		flakeCount:20,
+        minspeed:2,
+        maxSpeed:3
+		});
+});
+</script>
+
+</head>
+
+<body>
+<span id="bgc"></span>
+
+
+<div id="menu">
+<div id="slidingMenuDesc" class="slidingMenuDesc">
+  <div><span>My dearest treasure ! Gallery !</span></div>
+  <div><span>× Coming soon !</span></div>
+</div>
+<ul id="slidingMenu" class="slidingMenu">
+  <li><a href="index.html">Top</a></li>
+  <li><a href="work.html">Work</a></li>
+  <li><a href="#">About</a></li>
+</ul>
+</div>
+<div id="slideArea">
+	<div id="wrapper">  
+    	<div id="pf1" class="rot1">
+        <div id="pf2">
+                <div class="pfm">
+                <p class="anime02">Profile</p>
+                </div>
+                <p id="pf3">
+                <p><span class="tx60">C</span><span class="tx2">G</span>12A282 01 赤羽  南穂
+                	<span class="tx0">A</span>kahane Naho</p>
+                <p>長野県出身　<span class="tx2">A</span>型　双子座</p>
+                <p>趣味</p>
+                <p>
+                <span class="tx1">映画</span>・音楽鑑賞、裁縫、読書、写真撮<span class="tx0">影</span>、TVゲーム
+                </p>
+                <p>好きなもの</p>
+                <p>
+                <span class="tx1">真夜中</span>、彩度、スタバのソファー、日<span class="tx1">陰</span>
+                </p>
+                <p>嫌いなもの</p>
+                <p>
+                人ごみ、虫、暇
+                </p>
+                <p>尊敬する人物</p>
+                <p>
+                デヴィッド・フィンチャー、神谷英樹、米津玄師、<span class="tx60">光</span>宗薫
+                </p>
+                <p>将来の夢</p>
+                <p class="tx4">
+                <span class="tx60">W</span>ebデザイナー、親孝行の出来る大人
+                </p>
+        </div>
+        </div>
+	</div>
+	<div id="slider">
+		<img class="slide" src="image/bg03.png">
+		<img class="slide" src="image/bg02.png">
+		<img class="slide" src="image/bg01.png">
+	</div>
+</div>
+
+
+
+</body>
+
+</html>
